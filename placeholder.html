@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+            background-color: darkcyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .input{
+           position: relative; 
+        }
+        .input input{
+            background-color: transparent;
+            color: white;
+            font-size: 1em;
+            height: 30px;
+            width: 250px;
+            border: 2px solid yellow;
+            border-radius: 5px;
+        }
+        .input input:focus{
+            outline: none;
+            border: 2px solid orange;
+        }
+        .input label{
+            position: absolute;
+            top:30%;
+            color: white;
+            left: 10px;
+            font-size: 1em;
+            pointer-events: none;
+        }
+        .input input:focus ~ label,
+        .input input:valid ~ label {
+            transform: translateY(-19px);
+            background-color: darkcyan;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <input type="text" id="username" required>
+        <label for="Username">Enter your Username</label>
+    </div>
+</body>
+</html>
